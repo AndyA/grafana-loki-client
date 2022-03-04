@@ -1,0 +1,57 @@
+{
+  "name": "grafana-loki-client",
+  "version": "0.0.1",
+  "description": "A pure JS client for Grafana Loki",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.mjs --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyA/grafana-loki-client.git"
+  },
+  "keywords": [
+    "Grafana",
+    "Loki",
+    "logging",
+    "telemetry",
+    "metrics"
+  ],
+  "author": "Andy Armstrong <andy@hexten.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndyA/grafana-loki-client/issues"
+  },
+  "homepage": "https://github.com/AndyA/grafana-loki-client#readme",
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "consistent",
+    "jsxSingleQuote": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "avoid",
+    "requirePragma": false,
+    "insertPragma": false,
+    "proseWrap": "preserve",
+    "htmlWhitespaceSensitivity": "css",
+    "endOfLine": "lf"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8"
+  },
+  "dependencies": {
+    "@adobe/node-fetch-retry": "^2.1.3"
+  }
+}
