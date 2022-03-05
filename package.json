@@ -9,7 +9,8 @@
     "import": "./index.mjs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "c8 tap --no-cov -j4 lib/**/*.test.*",
+    "tdd": "nodemon --exec c8 tap --no-cov -j4 lib/**/*.test.*",
     "build": "babel index.mjs --out-file index.js"
   },
   "repository": {
@@ -49,7 +50,12 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.16.8"
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "c8": "^7.11.0",
+    "express": "^4.17.3",
+    "get-port": "^6.1.2",
+    "nodemon": "^2.0.15",
+    "tap": "^15.2.2"
   },
   "dependencies": {
     "@adobe/node-fetch-retry": "^2.1.3"
