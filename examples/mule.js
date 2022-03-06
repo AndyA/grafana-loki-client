@@ -10,16 +10,6 @@ const loki = new LokiStream("http://stilt:9088/loki/api/v1/push", {
   extraLabels: { host: os.hostname(), flag: "testing" }
 });
 
-// const lc = new LokiClient("http://stilt:9088/loki/api/v1/push", {
-//   extraLabels: { host: os.hostname(), flag: "testing" }
-// });
-
-// lc.labels({ dir: "tx" }).log("A TX log").log("Another TX log");
-// lc.labels({ dir: "rx" }).log("An RX log").log("Another RX log");
-
-// console.log(JSON.stringify(lc.streams, null, 2));
-// await lc.flush();
-
 const finished = util.promisify(stream.finished); // (A)
 
 async function writeLoki(loki) {
