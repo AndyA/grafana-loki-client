@@ -10,7 +10,7 @@ const loki = new LokiStream("http://stilt:9088/loki/api/v1/push", {
   extraLabels: { host: os.hostname(), flag: "testing" }
 });
 
-const finished = util.promisify(stream.finished); // (A)
+const finished = util.promisify(stream.finished);
 
 async function writeLoki(loki) {
   for (let i = 0; i < 30; i++) {
